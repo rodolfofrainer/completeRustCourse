@@ -42,4 +42,29 @@ fn main() {
     let y: Option<i32> = Some(5);
 
     // let sum = x + y; // cannot add `Option<i32>` to `i32`
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+    println!("{:?}", five);
+    println!("{:?}", six);
+    println!("{:?}", none);
+
+    what_pet("Dog")
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+fn what_pet(input: &str) {
+    match input {
+        "Dog" => println!("I have a dog"),
+        "Cat" => println!("I have a cat"),
+        "Fish" => println!("I have a fish"),
+        _ => println!("no clue"),
+    }
 }
