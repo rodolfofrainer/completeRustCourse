@@ -3,12 +3,29 @@ enum Pet {
     cat,
     fish,
 }
+
 impl Pet {
     fn what_am_i(self) -> &'static str {
         match self {
             Pet::dog => "dog",
             Pet::cat => "cat",
             Pet::fish => "fish",
+        }
+    }
+}
+enum Shape {
+    Triangle,
+    Square,
+    Pentagon,
+    Octagon,
+}
+impl Shape {
+    fn corners(&self) -> i8 {
+        match self {
+            Shape::Triangle => 3,
+            Shape::Square => 4,
+            Shape::Pentagon => 5,
+            Shape::Octagon => 8,
         }
     }
 }
@@ -67,6 +84,31 @@ fn main() {
     while let Some(top) = stack.pop() {
         println!("{}", top);
     }
+
+    // let x = 1;
+
+    // match x {
+    //     1 | 2 => println!("One or two"),
+    //     _ => println!("Not one or two"),
+    // };
+
+    let x = 10;
+
+    match x {
+        1..=5 => println!("Matches"),
+        _ => println!("Don't match"),
+    }
+
+    let x = Some(5);
+    let y = 5;
+
+    match x {
+        Some(10) => println!("10!"),
+        Some(x) if x == y => println!("Matches"),
+        _ => println!("default"),
+    }
+    let shape = Shape::Octagon;
+    println!("{}", shape.corners());
 }
 
 fn plus_one(x: Option<i32>) -> Option<i32> {
