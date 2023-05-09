@@ -11,15 +11,16 @@ trait Overview {
     }
 }
 
+trait Clone: Sized {
+    fn clone(&self) -> Self;
+    fn clone_from(&mut self, source: &Self) {
+        *self = source.clone();
+    }
+}
+
 struct Course {
     headline: String,
     author: String,
-}
-
-impl Drop for Course {
-    fn drop(&mut self) {
-        println!("Dropping {}", self.author);
-    }
 }
 
 struct AnotherCourse {
@@ -68,3 +69,9 @@ fn call_overview<T: Overview>(item: &T) {
 // fn overview<T:Overview>(item1:&T, item2:&T)
 // fn overview(item1: &impl Overview + AnotherTrait)
 // fn overview<T:Overview + AnotherTrait>(item1: &T, item2: &T)
+
+impl Drop for Course {
+    fn drop(&mut self) {
+        println!("Dropping {}", self.author);
+    }
+}
