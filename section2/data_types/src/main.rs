@@ -110,27 +110,32 @@ fn main() {
     // let sv: &[i32] = &v[2..4];
     // println!("{:?}", sv);
 
-    // Strings and &str
-    let name = String::from("Rust");
-    let course = "Intro to Rust".to_string();
-    let new_name = name.replace("Rust", "Cargo");
+    // // Strings and &str
+    // let name = String::from("Rust");
+    // let course = "Intro to Rust".to_string();
+    // let new_name = name.replace("Rust", "Cargo");
 
-    println!("name: {}", name);
-    println!("course: {}", course);
-    println!("new_name: {}", new_name);
+    // println!("name: {}", name);
+    // println!("course: {}", course);
+    // println!("new_name: {}", new_name);
 
-    // &str = "string slice", "stir"
-    let _str1 = "hello"; //&str
-    println!("{}", _str1);
+    // // &str = "string slice", "stir"
+    // let _str1 = "hello"; //&str
+    // println!("{}", _str1);
 
-    let _str2 = _str1.to_string(); //String
-    println!("{}", _str2);
+    // let _str2 = _str1.to_string(); //String
+    // println!("{}", _str2);
 
-    let _str3 = &_str2;
-    println!("{}", _str3);
+    // let _str3 = &_str2;
+    // println!("{}", _str3);
 
-    // compare strings == , !=
+    // // compare strings == , !=
 
-    println!("{}", _str1 == _str2);
-    println!("{}", "One".to_lowercase() == "one");
+    // println!("{}", _str1 == _str2);
+    // println!("{}", "One".to_lowercase() == "one");
+
+    // String Literals
+    // when you don't want utf-8
+    // let rust = "\x52\x75\x73\x74";
+    // println!("{}", rust);
 }
