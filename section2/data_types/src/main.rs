@@ -79,30 +79,58 @@ fn main() {
     // array2[3] = 1;
 
     //Vectors
-    let mut nums = vec![1, 2, 3];
+    // let mut nums = vec![1, 2, 3];
 
-    nums.push(4);
-    println!("nums: {:?}", nums);
-    nums.pop();
-    println!("nums: {:?}", nums);
+    // nums.push(4);
+    // println!("nums: {:?}", nums);
+    // nums.pop();
+    // println!("nums: {:?}", nums);
 
-    let mut vec = Vec::new(); //vec!
-    vec.push("Test");
-    vec.push("String");
-    println!("vec: {:?}", vec);
+    // let mut vec = Vec::new(); //vec!
+    // vec.push("Test");
+    // vec.push("String");
+    // println!("vec: {:?}", vec);
 
-    vec.reverse();
-    println!("vec: {:?}", vec);
+    // vec.reverse();
+    // println!("vec: {:?}", vec);
 
-    let mut vect = Vec::<i32>::with_capacity(2);
-    println!("{}", vect.capacity());
+    // let mut vect = Vec::<i32>::with_capacity(2);
+    // println!("{}", vect.capacity());
 
-    vect.push(23);
-    vect.push(3);
-    vect.push(2);
-    println!("{:?}", vect);
-    println!("{:?}", vect.capacity());
+    // vect.push(23);
+    // vect.push(3);
+    // vect.push(2);
+    // println!("{:?}", vect);
+    // println!("{:?}", vect.capacity());
 
-    let v: Vec<i32> = (0..5).collect();
-    println!("{:?}", v);
+    // let v: Vec<i32> = (0..5).collect();
+    // println!("{:?}", v);
+
+    // Slices
+    // let sv: &[i32] = &v[2..4];
+    // println!("{:?}", sv);
+
+    // Strings and &str
+    let name = String::from("Rust");
+    let course = "Intro to Rust".to_string();
+    let new_name = name.replace("Rust", "Cargo");
+
+    println!("name: {}", name);
+    println!("course: {}", course);
+    println!("new_name: {}", new_name);
+
+    // &str = "string slice", "stir"
+    let _str1 = "hello"; //&str
+    println!("{}", _str1);
+
+    let _str2 = _str1.to_string(); //String
+    println!("{}", _str2);
+
+    let _str3 = &_str2;
+    println!("{}", _str3);
+
+    // compare strings == , !=
+
+    println!("{}", _str1 == _str2);
+    println!("{}", "One".to_lowercase() == "one");
 }
