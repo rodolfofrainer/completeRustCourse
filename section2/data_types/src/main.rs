@@ -77,4 +77,32 @@ fn main() {
     // array2[0] = 10;
     // println!("array2: {:?}", array2);
     // array2[3] = 1;
+
+    //Vectors
+    let mut nums = vec![1, 2, 3];
+
+    nums.push(4);
+    println!("nums: {:?}", nums);
+    nums.pop();
+    println!("nums: {:?}", nums);
+
+    let mut vec = Vec::new(); //vec!
+    vec.push("Test");
+    vec.push("String");
+    println!("vec: {:?}", vec);
+
+    vec.reverse();
+    println!("vec: {:?}", vec);
+
+    let mut vect = Vec::<i32>::with_capacity(2);
+    println!("{}", vect.capacity());
+
+    vect.push(23);
+    vect.push(3);
+    vect.push(2);
+    println!("{:?}", vect);
+    println!("{:?}", vect.capacity());
+
+    let v: Vec<i32> = (0..5).collect();
+    println!("{:?}", v);
 }
