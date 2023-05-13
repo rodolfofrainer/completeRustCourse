@@ -7,9 +7,11 @@ fn main() {
     // println!("{}", s);
 
     let x = vec!["tyler".to_string()];
-    let y = x;
-
-    // println!("{:?}", x); // produces error: borrow of moved value: `x`
+    let y = x.clone();
+    let z = y.clone();
+    println!("{:?}", x);
+    println!("{:?}", y);
+    println!("{:?}", z);
 }
 
 // println!("{}", s); // produces an error
