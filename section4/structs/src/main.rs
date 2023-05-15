@@ -27,7 +27,15 @@
 //     }
 // }
 
+struct MyString<'a> {
+    text: &'a str,
+}
+
 fn main() {
+    let str1 = String::from("Hello");
+    let x = MyString {
+        text: str1.as_str(),
+    };
     //     let user1 = User {
     //         active: true,
     //         username: "Lol".to_string(),
