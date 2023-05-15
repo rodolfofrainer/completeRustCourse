@@ -8,24 +8,24 @@
 
 // struct UnitStruct;
 
-struct Square {
-    width: u32,
-    height: u32,
-}
+// struct Square {
+//     width: u32,
+//     height: u32,
+// }
 
-impl Square {
-    fn area(&self) -> u32 {
-        self.width * self.height
-    }
+// impl Square {
+//     fn area(&self) -> u32 {
+//         self.width * self.height
+//     }
 
-    fn whats_my_width(&self) -> u32 {
-        self.width
-    }
+//     fn whats_my_width(&self) -> u32 {
+//         self.width
+//     }
 
-    fn change_width(&mut self, width: u32) {
-        self.width = width;
-    }
-}
+//     fn change_width(&mut self, width: u32) {
+//         self.width = width;
+//     }
+// }
 
 fn main() {
     //     let user1 = User {
@@ -41,16 +41,32 @@ fn main() {
     //     let coords = Coordinates(1, 2, 3);
     // }
 
-    let mut square = Square {
-        width: 5,
-        height: 5,
-    };
+    //     let mut square = Square {
+    //         width: 5,
+    //         height: 5,
+    //     };
 
-    println!("{}", square.area());
-    println!("{}", square.whats_my_width());
-    square.change_width(32);
-    println!("{}", square.whats_my_width());
+    //     println!("{}", square.area());
+    //     println!("{}", square.whats_my_width());
+    //     square.change_width(32);
+    //     println!("{}", square.whats_my_width());
+
+    //     let r;
+    //     {
+    //         let x = 5;
+    //         r = &x;
+    //     } //x is dropped here
+
+    //     println!("{}", r); // 'a
+
+    //     //&i32
+    //     //&'a i32
+    //     //&'a mut i32
+    // }
 }
+// fn example<'a, 'b>(x: &'a str, y: &'b str) -> &'a str {
+//     x
+// } // 'a one parameter, 'b another parameter
 
 // fn build_user(username: String) -> User {
 //     User {
