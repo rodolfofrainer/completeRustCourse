@@ -36,6 +36,8 @@ fn main() {
     let x = MyString {
         text: str1.as_str(),
     };
+    let s: &'static str = "I have a static lifetime.";
+
     //     let user1 = User {
     //         active: true,
     //         username: "Lol".to_string(),
