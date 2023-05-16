@@ -37,4 +37,13 @@ fn main() {
         kind: IpAddrKind::V6,
         address: String::from("::1"),
     };
+
+    let some_number = Some(5);
+    let some_string = Some("a string");
+    let nothing: Option<i32> = None; // Option<T> is an enum defined by the standard library
+
+    let x: i32 = 5;
+    let y: Option<i32> = Some(5);
+
+    // let sum = x + y;
 }
