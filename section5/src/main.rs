@@ -74,6 +74,26 @@ fn main() {
     while let Some(top) = stack.pop() {
         println!("{}", top);
     }
+
+    let x = 5;
+    // match x {
+    //     1 | 2 => println!("one or two"),
+    //     _ => println!("not 1 or 2"),
+    // }
+
+    match x {
+        1..=5 => println!("one through five"),
+        _ => println!("something else"),
+    }
+
+    let x = Some(5);
+    let y = 5;
+
+    match x {
+        Some(10) => println!("ten"),
+        Some(x) if x == y => println!("match, x = {:?}", x),
+        _ => println!("no match"),
+    }
 }
 
 fn plus_one(x: Option<i32>) -> Option<i32> {
